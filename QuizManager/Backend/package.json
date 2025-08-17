@@ -1,0 +1,28 @@
+{
+  "name": "quizapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.2.0",
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.0",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "tsc --noEmitOnError",
+    "start": "node ./dist/app.js",
+    "start:ts": "ts-node ./src/app.ts",
+    "start:dev": "nodemon ./src/app.ts  "
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2"
+  }
+}
