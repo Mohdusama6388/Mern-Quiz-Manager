@@ -1,0 +1,143 @@
+
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff; 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
+}
+
+.btn {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+}
+
+.p {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.thread {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+}
+
+.table th {
+  font-weight: 600;
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #eef0ff;
+}
+
+
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.form .input {
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+.form .btn {
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form .input, .form .btn {
+    width: 100%;
+  }
+}
