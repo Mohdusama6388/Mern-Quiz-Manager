@@ -1,0 +1,164 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+  background: #f9fafb;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.card {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.input {
+  flex: 1 1 250px;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.btn, .btn1 {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #6366f1, #4338ca);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover, .btn1:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #4f46e5, #312e81);
+}
+
+.btn:active, .btn1:active {
+  transform: scale(0.96);
+}
+
+.ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+}
+
+.li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p {
+  margin: 0;
+  font-size: 1rem;
+  color: #334155;
+}
+
+@media (max-width: 600px) {
+  .h1 {
+    font-size: 1.6rem;
+  }
+
+  .card, .form {
+    flex-direction: column;
+  }
+
+  .btn, .btn1 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 16px;
+  }
+
+  .h1 {
+    font-size: 1.8rem;
+  }
+
+  .input {
+    flex: 1 1 100%;
+  }
+
+  .btn1 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+
+  .h1 {
+    font-size: 2.5rem;
+  }
+}
