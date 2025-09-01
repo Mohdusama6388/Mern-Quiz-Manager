@@ -1,14 +1,15 @@
 import express from "express";
-import { saveScore, getLeaderboard } from "../controllers/Leaderboard";
+import { saveScore, getLeaderboard, getAllLeaderboards } from "../controllers/Leaderboard";
 import { isAuthenticated } from "../middlewares/isAuth";
-
 
 const router = express.Router();
 
-// POST - Save or update score
-router.post("/",isAuthenticated, saveScore);
+router.post("/", isAuthenticated, saveScore);
 
-// GET - Fetch top scores
-router.get("/",isAuthenticated, getLeaderboard);
+// Global leaderboard
+router.get("/", isAuthenticated, getAllLeaderboards);
+
+// Specific quiz leaderboard
+router.get("/:quizId", isAuthenticated, getLeaderboard);
 
 export default router;

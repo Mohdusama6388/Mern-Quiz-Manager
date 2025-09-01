@@ -1,10 +1,9 @@
-
 import Leaderboard from "../models/Leaderboard";
 import ProjectError from "../helper/error";
 import { Request, Response, NextFunction } from "express";
 import mongoose from "mongoose";
 
-// Save or update highest score for a quiz
+// Save Score
 export const saveScore = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { userId, username, quizId, score, total } = req.body;
@@ -42,18 +41,31 @@ export const saveScore = async (req: Request, res: Response, next: NextFunction)
   }
 };
 
-// Get top 10 leaderboard for a quiz
 export const getLeaderboard = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { quizId } = req.query;
+    const { quizId } = req.params;
 
-    if (!quizId || !mongoose.Types.ObjectId.isValid(String(quizId))) {
+    if (!quizId || !mongoose.Types.ObjectId.isValid(quizId)) {
       throw Object.assign(new ProjectError("Invalid or missing quizId"), { statusCode: 400 });
     }
 
     const leaderboard = await Leaderboard.find({ quizId })
       .sort({ score: -1, updatedAt: 1 })
       .limit(10)
+      .lean();
+
+    res.json({ status: "success", data: leaderboard });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Global leaderboard (without quizId)
+export const getAllLeaderboards = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const leaderboard = await Leaderboard.find()
+      .sort({ score: -1, updatedAt: 1 })
+      .limit(20)
       .lean();
 
     res.json({ status: "success", data: leaderboard });

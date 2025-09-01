@@ -10,11 +10,19 @@ import  reportRoute from './routes/report'
 import favQuestionRoute from './routes/favQuestion'
 import  QuestionLogRoute from "./routes/questionlog";
 import RandomQuestionRoute from "./routes/RandomQuestion"
+import BookmarkRoute from "./routes/Bookmark"
 import { Request,Response,NextFunction } from "express";
 import {ReturnResponse} from "./utils/interfaces"
 import LeaderboardRoute from "./routes/Leaderboard"
+import cors from "cors";
+import  Quizzes from "./routes/Quizzes";
+
 
 const app = express();
+app.use(cors({
+  origin: "http://localhost:5173", 
+  credentials: true
+}));
 
 
 app.use(express.json());
@@ -35,6 +43,8 @@ app.use("/favquestion",favQuestionRoute);
 app.use('/leaderboard',LeaderboardRoute)
 app.use("/questionLog", QuestionLogRoute);
 app.use("/RandomQuestion",RandomQuestionRoute);
+app.use("/bookmark",BookmarkRoute)
+app.use("/Quizzes",Quizzes)
 
 app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => {
   const isClientError = err.statusCode && err.statusCode < 500;

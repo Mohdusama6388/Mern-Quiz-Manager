@@ -37,13 +37,4 @@ router.delete("/:quizId",isAuthenticated ,deleteQuiz);
 
 router.patch("/publish", isAuthenticated, publishQuiz);
 
-
-
-
-
-
-
-
-
-
 export default router;

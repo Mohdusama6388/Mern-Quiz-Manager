@@ -37,7 +37,7 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
         exp: number;
       };
     } catch (error) {
-      const err = new ProjectError("Invalid token");
+      const err = new ProjectError("Not authenticated");
       err.statusCode = 401;
       throw err;
     }

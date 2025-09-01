@@ -4,7 +4,6 @@ import ProjectError from "../helper/error";
 import { ReturnResponse } from "../utils/interfaces";
 import { shuffleArray } from "../utils/RandomQuestion";
 
-// Exported function
 export const getRandomizedQuiz = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const quizId = req.params.quizId;
@@ -17,7 +16,6 @@ export const getRandomizedQuiz = async (req: Request, res: Response, next: NextF
       throw err;
     }
 
-    // Shuffle questions
     const randomizedQuestions = shuffleArray(quiz.questions_list);
 
     const resp: ReturnResponse = {
