@@ -1,0 +1,142 @@
+
+
+.Container {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width:1000px;
+  margin-top:50px ;
+}
+
+.h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container1 {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.container1:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container1 h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #222;
+}
+
+.container1 label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #444;
+}
+
+.container1 input[type="radio"] {
+  margin-right: 8px;
+}
+
+.btn1 {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 8px 5px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn1:hover {
+  background-color: #574bdb;
+}
+
+.btn1:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #574bdb;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #574bdb;
+}
+
+
+@media (max-width: 768px) {
+  .Container {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  .h2 {
+    font-size: 20px;
+  }
+
+  .container1 h4 {
+    font-size: 16px;
+  }
+
+  .container1 label {
+    font-size: 14px;
+  }
+
+  .btn1 {
+    width: 45%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h2 {
+    font-size: 18px;
+  }
+
+  .container1 h4 {
+    font-size: 15px;
+  }
+
+  .btn1 {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
