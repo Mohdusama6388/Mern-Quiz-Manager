@@ -1,0 +1,155 @@
+.Container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff; 
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.Container1 {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #4f46e5;
+  border-left: 4px solid #4f46e5;
+  padding-left: 8px;
+}
+
+.Container1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.Container1 li {
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 200px; /* Makes items flexible */
+  min-width: 150px; /* Prevent items from shrinking too much */
+}
+
+.Container1 li:hover {
+  background: #eef2ff;
+  border-color: #4f46e5;
+  transform: translateX(6px);
+  color: #1f2937;
+}
+
+.Container1 li::after {
+  content: "➡";
+  font-size: 0.9rem;
+  color: #4f46e5;
+  transition: transform 0.3s ease;
+}
+
+.Container1 li:hover::after {
+  transform: translateX(4px);
+}
+
+.container2 {
+  flex: 1;
+  min-width: 250px;
+}
+
+.container2 > div {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.container2 > div:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.container2 h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+.container2 p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.6rem 0;
+}
+
+.p {
+  text-align: center;
+  color: #777;
+  font-size: 1rem;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .Container1 {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .Container1 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .Container {
+    padding: 1rem;
+  }
+
+  .h2 {
+    font-size: 1.6rem;
+  }
+
+  .h3 {
+    font-size: 1.2rem;
+  }
+
+  .Container1 li {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .container2 > div {
+    padding: 1rem;
+  }
+}
