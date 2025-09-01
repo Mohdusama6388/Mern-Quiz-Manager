@@ -1,0 +1,25 @@
+
+.Main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  width: 100%;
+}
+
+.Main main {
+  width: 100%;
+}
+
+.Main > *:not(main) {
+  flex: 1;
+  padding: 30px 60px;
+}
+
+@media (max-width: 768px) {
+  .Main > *:not(main) {
+    padding: 20px;
+  }
+}
